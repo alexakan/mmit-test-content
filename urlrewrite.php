@@ -7,6 +7,12 @@ $arUrlRewrite = array(
 		"PATH" => "/indexblocks.php",
 	),
 	array(
+		"CONDITION" => "#^/o-kompanii/users/index.php/#",
+		"RULE" => "",
+		"ID" => "bitrix:news",
+		"PATH" => "/o-kompanii/users/index.php",
+	),
+	array(
 		"CONDITION" => "#^/bitrix/services/ymarket/#",
 		"RULE" => "",
 		"ID" => "",
