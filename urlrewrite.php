@@ -7,28 +7,28 @@ $arUrlRewrite = array(
 		"PATH" => "/indexblocks.php",
 	),
 	array(
-		"CONDITION" => "#^/o-kompanii/users/index.php/#",
-		"RULE" => "",
-		"ID" => "bitrix:news",
-		"PATH" => "/o-kompanii/users/index.php",
-	),
-	array(
 		"CONDITION" => "#^/bitrix/services/ymarket/#",
 		"RULE" => "",
 		"ID" => "",
 		"PATH" => "/bitrix/services/ymarket/index.php",
 	),
 	array(
-		"CONDITION" => "#^/company/partners/#",
+		"CONDITION" => "#^/o-kompanii/users/#",
 		"RULE" => "",
 		"ID" => "bitrix:news",
-		"PATH" => "/company/partners/index.php",
+		"PATH" => "/o-kompanii/users/index.php",
 	),
 	array(
 		"CONDITION" => "#^/company/licenses/#",
 		"RULE" => "",
 		"ID" => "bitrix:news",
 		"PATH" => "/company/licenses/index.php",
+	),
+	array(
+		"CONDITION" => "#^/company/partners/#",
+		"RULE" => "",
+		"ID" => "bitrix:news",
+		"PATH" => "/company/partners/index.php",
 	),
 	array(
 		"CONDITION" => "#^/company/history/#",

@@ -1,9 +1,9 @@
 <?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
 $APPLICATION->SetPageProperty("title", "Сотрудники компании");
 $APPLICATION->SetTitle("Сотрудники компании");?><?$APPLICATION->IncludeComponent(
-	"bitrix:news",
-	"",
-	Array(
+	"bitrix:news", 
+	".default", 
+	array(
 		"ADD_ELEMENT_CHAIN" => "N",
 		"ADD_SECTIONS_CHAIN" => "Y",
 		"AJAX_MODE" => "N",
@@ -20,11 +20,20 @@ $APPLICATION->SetTitle("Сотрудники компании");?><?$APPLICATION
 		"DETAIL_ACTIVE_DATE_FORMAT" => "d.m.Y",
 		"DETAIL_DISPLAY_BOTTOM_PAGER" => "Y",
 		"DETAIL_DISPLAY_TOP_PAGER" => "N",
-		"DETAIL_FIELD_CODE" => array(""),
+		"DETAIL_FIELD_CODE" => array(
+			0 => "",
+			1 => "",
+		),
 		"DETAIL_PAGER_SHOW_ALL" => "Y",
 		"DETAIL_PAGER_TEMPLATE" => "",
 		"DETAIL_PAGER_TITLE" => "Страница",
-		"DETAIL_PROPERTY_CODE" => array("EMAIL","DATEBIRTH","POST","PHONE",""),
+		"DETAIL_PROPERTY_CODE" => array(
+			0 => "EMAIL",
+			1 => "DATEBIRTH",
+			2 => "POST",
+			3 => "PHONE",
+			4 => "",
+		),
 		"DETAIL_SET_CANONICAL_URL" => "N",
 		"DETAIL_STRICT_SECTION_CHECK" => "N",
 		"DISPLAY_BOTTOM_PAGER" => "Y",
@@ -38,8 +47,14 @@ $APPLICATION->SetTitle("Сотрудники компании");?><?$APPLICATION
 		"IBLOCK_TYPE" => "aspro_stroy_content",
 		"INCLUDE_IBLOCK_INTO_CHAIN" => "Y",
 		"LIST_ACTIVE_DATE_FORMAT" => "d.m.Y",
-		"LIST_FIELD_CODE" => array("NAME",""),
-		"LIST_PROPERTY_CODE" => array("POST",""),
+		"LIST_FIELD_CODE" => array(
+			0 => "NAME",
+			1 => "",
+		),
+		"LIST_PROPERTY_CODE" => array(
+			0 => "POST",
+			1 => "",
+		),
 		"MESSAGE_404" => "",
 		"META_DESCRIPTION" => "-",
 		"META_KEYWORDS" => "-",
@@ -52,9 +67,8 @@ $APPLICATION->SetTitle("Сотрудники компании");?><?$APPLICATION
 		"PAGER_TEMPLATE" => ".default",
 		"PAGER_TITLE" => "Новости",
 		"PREVIEW_TRUNCATE_LEN" => "",
-		"SEF_FOLDER" => "/o-kompanii/users/index.php/",
+		"SEF_FOLDER" => "/o-kompanii/users/",
 		"SEF_MODE" => "Y",
-		"SEF_URL_TEMPLATES" => Array("detail"=>"#ELEMENT_ID#/","news"=>"","section"=>""),
 		"SET_LAST_MODIFIED" => "N",
 		"SET_STATUS_404" => "N",
 		"SET_TITLE" => "Y",
@@ -70,6 +84,13 @@ $APPLICATION->SetTitle("Сотрудники компании");?><?$APPLICATION
 		"USE_REVIEW" => "N",
 		"USE_RSS" => "N",
 		"USE_SEARCH" => "N",
-		"USE_SHARE" => "N"
-	)
+		"USE_SHARE" => "N",
+		"COMPONENT_TEMPLATE" => ".default",
+		"SEF_URL_TEMPLATES" => array(
+			"news" => "/o-kompanii/users/",
+			"section" => "",
+			"detail" => "#ELEMENT_CODE#/",
+		)
+	),
+	false
 );?><br><?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>
